@@ -203,7 +203,7 @@ class CSSDataset(BaseDataset):
 
 
 class FurnitureStyle(BaseDataset):
-    """Fashion200k dataset."""
+    """Bonn Furniture Styles Dataset."""
 
     def __init__(self, path, split='train', transform=None):
         super(FurnitureStyle, self).__init__()
@@ -212,7 +212,7 @@ class FurnitureStyle(BaseDataset):
         self.transform = transform
         self.img_path = path + '/'
 
-        # get label files for the split
+        # get split files for the split
         label_path = path + '/splits/'
         from os import listdir
         from os.path import isfile
@@ -249,6 +249,7 @@ class FurnitureStyle(BaseDataset):
         else:
             self.generate_test_queries_()
 
+    # if caption words are in not aligned, replace source word with target word
     def get_different_word(self, source_caption, target_caption):
         source_words = source_caption.split()
         target_words = target_caption.split()
@@ -260,6 +261,8 @@ class FurnitureStyle(BaseDataset):
                 break
         mod_str = 'replace ' + source_word + ' with ' + target_word
         return source_word, target_word, mod_str
+
+    # index mapping from source image to target image
 
     def generate_test_queries_(self):
         file2imgid = {}
