@@ -20,15 +20,20 @@ Divyansh Aggarwal, Elchin Valiyev, Fadime Sener, and Angela Yao
 CVPR 2018.
 **<a href="https://cvml.comp.nus.edu.sg/furniture/download.html">dataset download</a>**
 
-## Introduction
+## Implementation
 
-In this paper, we study the task of image retrieval, where the input query is
-specified in the form of an image plus some text that describes desired
-modifications to the input image.
+In order implement TRIG to the furniture style dataset, we have created a `test_queries.txt` to map the index of source image and target image for image retrieval. Each image has captions could be cross-referenced with testing queries. Here are our dataset stats:
 
-We propose a new way to combine image and
-text using TIRG function for the retrieval task. We show this outperforms
-existing approaches on different datasets.
+### Train Model
+
+FurnitureStyle: 133346 images
+56520 unique cations
+Modifiable images 40076
+
+### Test Model
+
+FurnitureStyle: 28812 images
+28812 test queries
 
 ## Setup
 
@@ -37,6 +42,8 @@ existing approaches on different datasets.
 - numpy
 - tqdm
 - tensorboardX
+- Python 3.0.0 or above
+- Need ave
 
 ## Running Models
 
@@ -59,7 +66,7 @@ Make sure the dataset include these files:
 <dataset_path>/test_queries.txt`
 ```
 
-note
+note that the file name `val_split` in `/splits/` from origin dataset should be renamed to `test_val_split`
 
 Run training & testing:
 
