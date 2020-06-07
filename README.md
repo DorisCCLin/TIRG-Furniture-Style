@@ -24,16 +24,15 @@ CVPR 2018.
 
 In order implement TRIG to the furniture style dataset, we have created a `test_queries.txt` to map the index of source image and target image for image retrieval. Each image has captions could be cross-referenced with testing queries. Here are our dataset stats:
 
-### Train Model
+Train Model
 
-FurnitureStyle: 133346 images
-56520 unique cations
-Modifiable images 40076
+- FurnitureStyle: 133346 images
+- 56520 unique cations
+- Modifiable images 40076
 
-### Test Model
-
-FurnitureStyle: 28812 images
-28812 test queries
+Test Model
+- FurnitureStyle: 28812 images
+- 28812 test queries
 
 ## Setup
 
