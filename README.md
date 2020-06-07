@@ -42,7 +42,11 @@ Test Model
 - tqdm
 - tensorboardX
 - Python 3.0.0 or above
-- Need ave
+
+## Hardware Requirement:
+
+- Need have a `cuda` **<a href="https://developer.nvidia.com/cuda-gpus">compatible graphic card
+  </a>**
 
 ## Running Models
 
