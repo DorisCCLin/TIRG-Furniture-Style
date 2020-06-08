@@ -78,9 +78,9 @@ Run training & testing:
 ```
 python main.py --dataset=furnitureStyle --dataset_path=./furniture-style \
   --num_iters=160000 --model=concat --loss=batch_based_classification \
-  --learning_rate_decay_frequency=50000 --comment=f200k_concat
+  --learning_rate_decay_frequency=50000 --comment=furnitureS_concat
 
 python3 main.py --dataset=furnitureStyle --dataset_path=./furniture-style \
   --num_iters=160000 --model=tirg --loss=batch_based_classification \
-  --learning_rate_decay_frequency=50000 --comment=f200k_tirg
+  --learning_rate_decay_frequency=50000 --comment=furnitureS_tirg
 ```
